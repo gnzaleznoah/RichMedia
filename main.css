@@ -2,7 +2,7 @@
 
 *{
     box-sizing:border-box;
-    padding:5px;
+    margin:0;
 }
 html{
     padding:0;
@@ -29,9 +29,11 @@ header{
     background-size:400%;
     background-position:left;
     margin-bottom:2rem;
-    animation: bg-animation 15s infinite alternate;
+    mix-blend-mode: difference;
+    animation: bg-animation 10s 2 alternate;
     height:auto;
     height:100%;
+    padding:15px;
 }
 @keyframes bg-animation {
     0%{
@@ -69,7 +71,7 @@ h2{
     background-color:rgba(255, 255, 255, 0.8);
     border-radius:9px;
     max-width:850px;
-    margin:auto;
+    margin:1rem;
     padding:20px;
 }
 .audio-change{
@@ -103,7 +105,7 @@ video{
     max-width:850px;
     margin:auto;
 }
-.time-fill {
+/* .time-fill {
     width:50%;
     background: rgba(241, 199, 91, 0.5); 
     flex: 0;
@@ -111,6 +113,40 @@ video{
     -moz-border-radius: 2px;
     -webkit-border-radius: 2px;
     border-radius: 2px;
+} */
+
+/*Progress Fallback*/
+progress[value] {
+    appearance: none; /* Needed for Safari */
+    border: none; /* Needed for Firefox */
+    color: #e52e71; /* Fallback to a solid color */
+    width:100%;
+    max-width:850px;
+    margin:auto;
+}
+
+/* WebKit styles */
+progress[value]::-webkit-progress-value {
+    background-image: linear-gradient(
+        to right,
+        #ff8a00, #e52e71
+    );
+    transition: width 1s linear;
+    width:100%;
+    max-width:850px;
+    margin:auto;
+}
+
+/* Firefox styles */
+Progress Fill
+progress[value]::-moz-progress-bar {
+    background-image: -moz-linear-gradient(
+        right,
+        #ff8a00, #e52e71
+    );
+    width:100%;
+    max-width:850px;
+    margin:auto;
 }
 .controler{
     bottom:0;
@@ -228,4 +264,10 @@ input[type=range]::-moz-range-track {
  .myVid{
     max-height: 375px;
  }   
+ header{
+    padding:3rem;
+ }
+ .intro{
+    margin:auto;
+ }
 }

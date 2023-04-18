@@ -98,6 +98,16 @@ function progressUpdate(){
     const percent = (video.currentTime / video.duration) * 100;
     progressFill.style.flexBasis = '${percent}%';
 }
+//PROGRESS Function
+function progressLoop() {
+    setInterval(function () {
+    progressFill.value = Math.round((video.currentTime / video.duration) * 100);
+    });
+  }
+  
+  
+
+//Skip Adead Before
 function skip(){
     video.currentTime += parseFloat(this.dataset.skip);
     audioOrig.currentTime += parseFloat(this.dataset.skip);
@@ -201,7 +211,10 @@ skipper.forEach(button => button.addEventListener('click', skip));
 volume.addEventListener('change', rangeUpdate);
 fullscreen.addEventListener('click', fullScreen);
 
+//CalltoProgress
+progressLoop();
 
+//Mouse event listener to click on scub and change time
 let mousedown = false;
 progress.addEventListener ('click', scrub);
 progress.addEventListener('mousemove', (e) => mousedown && scrub(e));
