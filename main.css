@@ -287,25 +287,16 @@ input[type=range]::-moz-range-track {
 }
 @media screen and (min-width: 1125px){
     .chill-coffee{
-        background-color:rgba(255, 255, 255, 0.801);
-        padding:5px;
-        max-width:max-content;
-        text-align:center;
-        position:absolute;
         left: 235px;
-        bottom:100px;
-        opacity:0;
+    }
+}
+@media screen and (min-width: 1145px){
+    .chill-coffee{
+        left: 590px;
     }
 }
 @media screen and (min-width: 2300px){
     .chill-coffee{
-        background-color:rgba(255, 255, 255, 0.801);
-        padding:5px;
-        max-width:max-content;
-        text-align:center;
-        position:absolute;
         left: 745px;
-        bottom:100px;
-        opacity:0;
     }
 }

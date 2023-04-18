@@ -104,8 +104,9 @@ function progressLoop() {
     progressFill.value = Math.round((video.currentTime / video.duration) * 100);
     });
   }
-  
-  
+  //CalltoProgress
+progressLoop();
+ 
 
 //Skip Adead Before
 function skip(){
@@ -143,7 +144,7 @@ function foleyUpdate(){
     if(video.muted === true){
         video.muted = false;
         audioOrig.muted = true;
-        changeAudioBtn.innerHTML ='ORIGINAL';
+        changeAudioBtn.innerHTML ='ORIGINAL is Off';
     }
     else if (video.muted === false){
         video.muted = true;
@@ -165,19 +166,23 @@ function backVolume(){
         backButn.innerHTML='Background Music is OFF';
     }
 }
-// function finalProduct{
-//     if(audioOrig.muted === true){
-//         audioOrig.muted = true;
-//         backgroundMusic.muted=false;
-//         video.muted = false;
-//     }
-//     else if(audioOrig.muted === false){
-//         audioOrig.muted = true
-//         backgroundMusic.muted=false;
-//         video.muted = false;
-//     }
+//FINAL
+function finalProduct(){
+    if(audioOrig.muted === true){
+        audioOrig.muted = true;
+        audioOrig.volume = 0;
+        backgroundMusic.muted=false;
+        backgroundMusic.volume = 1;
+        video.muted = false;
+    }
+    else if(audioOrig.muted === false){
+        audioOrig.muted = true
+        audioOrig.volume = 1
+        backgroundMusic.muted=false;
+        video.muted = false;
+    }
 
-// }
+}
 function func1(){
     chill.setAttribute('id','opacity-change');
 }
@@ -187,6 +192,9 @@ changeAudioBtn.addEventListener('click', foleyUpdate);
 
 //Toggle Background Music
 backButn.addEventListener('click', backVolume);
+
+//FINAL Button 
+final.addEventListener('click', finalProduct);
 
 //Event Listeners for click on Video
 video.addEventListener('click', togglePlay);
@@ -210,9 +218,6 @@ skipper.forEach(button => button.addEventListener('click', skip));
 // volume.forEach(range => range.addEventListener('mousemove', rangeUpdate));
 volume.addEventListener('change', rangeUpdate);
 fullscreen.addEventListener('click', fullScreen);
-
-//CalltoProgress
-progressLoop();
 
 //Mouse event listener to click on scub and change time
 let mousedown = false;
