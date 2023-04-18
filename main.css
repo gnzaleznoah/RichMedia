@@ -51,6 +51,35 @@ h2{
     text-align:center;
     font-family: 'Stardos Stencil', cursive;
 }
+.intro {
+    animation:startup 2.5s ease-in;
+}
+@keyframes startup{
+    0%{
+        opacity:0;
+    }
+    50%{
+        opacity:.25;
+    }
+    100%{
+        opacity:1;
+    }
+}
+.audio-change,
+.vid-box{
+    animation:onload 4.5s ease-in;
+}
+@keyframes onload{
+    0%{
+        opacity:0;
+    }
+    50%{
+        opacity:.25;
+    }
+    100%{
+        opacity:1;
+    }
+}
 .butn{
     background-image:var(--gradient);
     background-size:350%;
