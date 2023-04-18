@@ -31,7 +31,8 @@ const audioOrig = document.querySelector('.orig-aud');
 //Variables for background music
 const backgroundMusic = document.querySelector('.background-music');
 const backButn = document.querySelector('#musictoggle')
-
+//Final Product
+const final = document.querySelector('#final');
 //Variable for Cue Point
 const chill = document.querySelector('.chill-coffee');
 
@@ -154,6 +155,19 @@ function backVolume(){
         backButn.innerHTML='Background Music is OFF';
     }
 }
+// function finalProduct{
+//     if(audioOrig.muted === true){
+//         audioOrig.muted = true;
+//         backgroundMusic.muted=false;
+//         video.muted = false;
+//     }
+//     else if(audioOrig.muted === false){
+//         audioOrig.muted = true
+//         backgroundMusic.muted=false;
+//         video.muted = false;
+//     }
+
+// }
 function func1(){
     chill.setAttribute('id','opacity-change');
 }
@@ -169,7 +183,8 @@ video.addEventListener('click', togglePlay);
 video.addEventListener('click', updateButton)
 video.addEventListener('timeupdate', progressUpdate);
 
-
+//Event Listener Final Product
+// final.addEventListener('click', finalProduct);
 //Event Listener for Play button
 playPause.addEventListener('click', togglePlay);
 playPause.addEventListener('click', updateButton);
