@@ -11,10 +11,10 @@ html{
 :root{
     --gradient: linear-gradient(
         45deg,
-        #d3d363,
+        #BCC6CC,
         #C0C0C0,
         #f5ded7,
-        #e7b3da,
+        #c8f2c9,
         #aaa8af
     );
 }
@@ -33,7 +33,7 @@ header{
     animation: bg-animation 10s 2 alternate;
     height:auto;
     height:100%;
-    padding:15px;
+    padding:25px;
 }
 @keyframes bg-animation {
     0%{
@@ -55,9 +55,11 @@ h2{
     background-image:var(--gradient);
     background-size:350%;
     background-position:right;
-    border:solid 3px #856338;
+    border:solid 3px #9f9e9e;
     border-radius:9px;
+    cursor:pointer;
     margin:1rem 0 1rem 5px;
+    font-weight:bolder;
     padding:10px;
     color:var(--purple-color);
     transition:background-position 1s;
