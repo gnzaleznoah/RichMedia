@@ -261,6 +261,8 @@ input[type=range]::-moz-range-track {
     }
 }
 /* end of input by Andy Leverenz */
+
+
 @media screen and (min-width: 600px){
  /* .myVid{
     max-height: 375px;
@@ -268,6 +270,13 @@ input[type=range]::-moz-range-track {
  header{
     padding:3rem;
  }
+ .audio-change{
+    display:flex;
+    justify-content:center;
+}
+.butn{
+    margin: 2rem;
+}
  .intro{
     margin:auto;
  }
