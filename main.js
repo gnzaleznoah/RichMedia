@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
 const player = document.querySelector('.video-container');
 const video = player.querySelector('.myVid');
 const progress = player.querySelector('.time-bar');
-const progressFill = player.querySelector('.time-fill');
+const progressFill = player.querySelector('#time-fill');
 //Play Pause 
 const playPause = player.querySelector('#play_button');
 const stopVid = player.querySelector('#stop')
